@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm --workspaces run build && cp -r client/dist server/public",
+    "start": "node server/index.js",
+    "render-build": "npm install && npm run build"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
