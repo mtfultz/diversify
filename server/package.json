@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm --workspaces run build && cp -r client/dist server/public",
-    "start": "node server/index.js",
-    "render-build": "npm install && npm run build"
+    "build": "npm --prefix ../src run build && cp -r ../src/dist ./public",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
