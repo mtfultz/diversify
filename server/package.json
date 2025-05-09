@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npm --prefix ../client run build && cp -r ../client/dist ./public",
+    "build": "npm --prefix ../client install && npm --prefix ../client run build && cp -r ../client/dist ./public",
     "start": "node index.js"
   },
   "keywords": [],
