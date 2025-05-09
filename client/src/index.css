@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles for light and dark themes */
+@layer base {
+  /* Light mode (default) background & text */
+  body {
+    @apply bg-white text-zinc-900;
+  }
+  /* Dark mode background & text */
+  .dark body {
+    @apply bg-zinc-900 text-zinc-100;
+  }
+  /* Focus ring styles (applied in both modes) */
+  input, button {
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-500;
+  }
+}
+
+/* ApexCharts dark mode toolbar icons */
+.apexcharts-toolbar svg {
+  fill: #bbb !important;
+}
