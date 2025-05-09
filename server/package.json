@@ -4,8 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm --prefix ../src run build && cp -r ../src/dist ./public",
+    "build": "npm --prefix ../client run build && cp -r ../client/dist ./public",
     "start": "node index.js"
   },
   "keywords": [],
