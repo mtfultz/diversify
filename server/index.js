@@ -154,6 +154,4 @@ process.on('unhandledRejection', err =>
 /* ---------- start ---------- */
 app.listen(PORT, () => {
   console.log(`✅  API on http://localhost:${PORT}`);
-  console.log('   Demo key stub:',
-              (DEMO_KEY || 'NONE').slice(0,8));
 });
