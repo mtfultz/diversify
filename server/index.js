@@ -142,9 +142,9 @@ app.get('/api/history', async (req, res) => {
 /* ---------- optional static client ---------- */
 if (process.env.NODE_ENV === 'production') {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+  app.use(express.static(path.join(__dirname, '.../public')));
   app.get('/:path(*)', (_req, res) =>
-    res.sendFile(path.join(__dirname, '../client/dist/index.html')));
+    res.sendFile(path.join(__dirname, '.../public/index.html')));
 }
 
 /* ---------- safety-net ---------- */
