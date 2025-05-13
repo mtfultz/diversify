@@ -31,7 +31,7 @@ Built with **React + Vite + Tailwind** on the front-end and an **Express** API t
 
 
 # 0) clone
-git clone https://github.com/<you>/diversify.git && cd diversify
+git clone https://github.com/mtfultz/diversify.git && cd diversify
 
 # 1) install all deps (root-level package.json hoists workspaces)
 npm ci
