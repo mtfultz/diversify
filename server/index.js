@@ -158,6 +158,11 @@ app.get("/api/history", async (req, res) => {
   }
 });
 
+/* ---------- /api/health ---------- */
+app.get("/api/health", (_req, res) => {
+  res.json({ status: "ok", time: Date.now() });
+});
+
 /* ---------- optional static client ---------- */
 // if (process.env.NODE_ENV === "production") {
 //   const __dirname = path.dirname(fileURLToPath(import.meta.url));
