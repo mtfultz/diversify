@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 
+const API = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
+
 /**
- * Returns CoinGecko’s full asset list via your own proxy
+ * Returns CoinGecko’s top-200 asset list via your own proxy
  * (avoids CORS + keeps a 24-h server cache).
  */
 export default function useCoinList() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("/api/coins/list") // ← now hits Express, not CoinGecko
+    fetch(`${API}/api/coins/list`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -16,7 +18,7 @@ export default function useCoinList() {
       .then(setList)
       .catch((err) => {
         console.error("coin list:", err.message);
-        setList([]); // fall back to empty (no validation)
+        setList([]); // silent fallback
       });
   }, []);
 

@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+
+const API = (import.meta.env.VITE_BACKEND_URL || "").replace(/\/$/, "");
 
 /**
  * Fetch current USD prices for an array of CoinGecko IDs.
@@ -10,11 +12,11 @@ export default function usePrices(ids = []) {
   useEffect(() => {
     if (!ids.length) return;
 
-    fetch(`/api/prices?ids=${ids.join(',')}`)
-      .then(r => r.json())
+    fetch(`${API}/api/prices?ids=${ids.join(",")}`)
+      .then((r) => r.json())
       .then(setData)
       .catch(console.error);
-  }, [ids.join(',')]); // re-fetch only when the id list truly changes
+  }, [ids.join(",")]);
 
   return data;
 }
