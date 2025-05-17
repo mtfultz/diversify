@@ -102,6 +102,7 @@ app.get("/api/prices", async (req, res) => {
     );
     res.json(data);
   } catch (e) {
+    console.error("/api/prices error:", e.message);
     res.status(502).json({ error: e.message });
   }
 });
@@ -154,6 +155,7 @@ app.get("/api/history", async (req, res) => {
     });
     res.json(data);
   } catch (e) {
+    console.error("/api/history error:", e.message);
     res.status(502).json({ error: e.message });
   }
 });
