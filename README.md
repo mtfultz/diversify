@@ -38,14 +38,15 @@ npm ci
 
 # 2) add env vars
 
-cp .env.example .env # then set COINGECKO_API_KEY=<your key>
+cp .env.example .env 
+# then set COINGECKO_API_KEY=<your key>
 
 # 3) open two terminals for client and server
 
 cd server/
 cd client/
 
-# 3) run both services in parallel
+# 4) run both services in parallel
 
 node index.js # spawns:
 
