@@ -9,6 +9,9 @@ A **full-stack** web app that lets you:
 
 Built with **React + Vite + Tailwind** on the front-end and an **Express** API that securely proxies the CoinGecko endpoints.
 
+https://diversify-bay.vercel.app/
+(note: using a demo coingecko api so it is easily rate limited)
+
 ![Diversify dashboard](https://github.com/user-attachments/assets/fdca14e6-2f1b-4cfc-ad5c-3ed16f903f50)
 
 ---
