@@ -39,7 +39,7 @@ npm ci
 # 2) add env vars
 
 cp .env.example .env 
-# then set COINGECKO_API_KEY=<your key>
+then set COINGECKO_API_KEY=<your key>
 
 # 3) open two terminals for client and server
 
